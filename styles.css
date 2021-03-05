@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
 /* || Global Styles */
 * {
     box-sizing: border-box;
@@ -93,4 +95,13 @@ input[type="checkbox"]:checked ~ label .twelve-hour-notation {
 input[type="checkbox"] ~ label .twelve-hour-notation,
 input[type="checkbox"]:checked ~ label .twentyfour-hour-notation {
     opacity: 1;
+}
+
+/* || Clock Styles */
+#clock {
+    color: #17d4fe;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 7px;
 }
