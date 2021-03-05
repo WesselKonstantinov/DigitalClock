@@ -1,0 +1,96 @@
+/* || Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+}
+
+/* || Toggle Switch Styles */
+
+/*
+    make the control and label line up with flexbox
+*/
+li {
+    width: 100px;
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+/*
+    make the notation parts overlap each other using positioning
+*/
+label {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+}
+
+label span {
+    position: absolute;
+    width: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+/*
+    remove the default styling of the checkbox and create 
+    the outer toggle area
+*/
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    border: 2px solid #fff;
+    background: #aaa;
+    transition: all .4s;
+}
+
+/*
+    create the inner toggle switch
+*/
+input[type="checkbox"]::before {
+    width: 16px;
+    height: 16px;
+    border-radius: 9px;
+    background-color: #fff;
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 16%;
+    transition: all .4s;
+}
+
+/*
+    change the outer background color and move the 
+    inner toggle switch when the checkbox is checked
+*/
+input[type="checkbox"]:checked {
+    background-color: #0084ff;
+    transition: all .4s;
+}
+
+input[type="checkbox"]:checked::before {
+    left: 35%;
+    transition: all .4s;
+}
+
+/*
+    make "12-hour" and "24-hour" visible depending on 
+    whether the checkbox is checked or not
+*/
+input[type="checkbox"] ~ label .twentyfour-hour-notation,
+input[type="checkbox"]:checked ~ label .twelve-hour-notation {
+    opacity: 0;
+} 
+
+input[type="checkbox"] ~ label .twelve-hour-notation,
+input[type="checkbox"]:checked ~ label .twentyfour-hour-notation {
+    opacity: 1;
+}
