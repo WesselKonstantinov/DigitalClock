@@ -89,12 +89,12 @@ input[type="checkbox"]:checked::before {
 */
 input[type="checkbox"] ~ label .twentyfour-hour-notation,
 input[type="checkbox"]:checked ~ label .twelve-hour-notation {
-    opacity: 0;
+    opacity: 1;
 } 
 
 input[type="checkbox"] ~ label .twelve-hour-notation,
 input[type="checkbox"]:checked ~ label .twentyfour-hour-notation {
-    opacity: 1;
+    opacity: 0;
 }
 
 /* || Clock Styles */
