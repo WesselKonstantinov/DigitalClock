@@ -101,7 +101,7 @@ input[type="checkbox"]:checked ~ label .twentyfour-hour-notation {
 #clock {
     color: #17d4fe;
     text-align: center;
-    font-size: 60px;
+    font-size: 55px;
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 7px;
 }
